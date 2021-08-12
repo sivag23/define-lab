@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Authors</h1>
+<div class="pull-right"> <button class="btn btn-success"> <%= link_to 'New Author', new_author_path %> </button> </div>
+
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Author ID</th>
+      <th scope="col">First name</th>
+      <th scope="col">Last name</th>
+      <th scope="col">Date of birth name</th>
+      <th scope="col">View</th>
+      <th scope="col">Actions</th>
+    </tr>
+
+    
+  </thead>
+
+  <tbody>
+    <% @authors.each do |author| %>
+      <tr>
+        <td><%= author.id %></td>
+        <td><%= author.first_name %></td>
+        <td><%= author.last_name%></td>
+        <td><%= author.date_of_birth%></td>
+        <td><button class="btn btn-info"><%= link_to 'Show', author %></button></td>
+        <td><button class="btn btn-warning"><%= link_to 'Edit', edit_author_path(author) %></button>
+        <button class="btn btn-danger"> <%= link_to 'Destroy', author, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+          <th scope="col"> Book ID</th>
+          <th scope="col">Book Title</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+
+
+      <tbody>
+          <tr>
+            <td><%= @book.id %></td>
+            <td><%= @book.book_title%></td>
+            <td><button class="btn btn-warning"><%= link_to 'Edit', edit_book_path(@book) %></button>
+            <button class="btn btn-danger"> <%= link_to 'Back', books_path %></button></td>
+          </tr>
+      </tbody>
+
+    
+</table>
+
+
